@@ -105,6 +105,7 @@ public class BasicLuisDialog : LuisDialog<object>
     #endregion
 
     #region Housing & Apartment
+
     [LuisIntent("Eviction and Defence")]
     public async Task DefenceIntent(IDialogContext context, LuisResult result)
     {
@@ -169,13 +170,41 @@ public class BasicLuisDialog : LuisDialog<object>
         context.Wait(MessageReceived);
     }
 
+    #endregion
 
+    #region Tenant's Rights
 
+    [LuisIntent("Can landlord do that")]
+    public async Task LandlorddothatIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Can landlord do that intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
 
+    [LuisIntent("Rent-to-own in Washington state")]
+    public async Task RenttoownIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Rent-to-own in Washington state intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
 
+    [LuisIntent("Tenants if need repairs")]
+    public async Task NeedrepairsIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Tenants if need repairs intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
 
-
-
+    [LuisIntent("Getting security deposit back")]
+    public async Task SecuritydepositIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Getting security deposit back intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
 
     #endregion
+
+
+
+
 }
