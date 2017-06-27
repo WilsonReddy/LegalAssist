@@ -20,7 +20,8 @@ public class BasicLuisDialog : LuisDialog<object>
         await context.PostAsync($"You have reached the none intent. You said: {result.Query}"); //
         context.Wait(MessageReceived);
     }
-    
+
+    #region Family & Safety
 
     // Go to https://luis.ai and create a new intent, then train/publish your luis app.
     // Finally replace "MyIntent" with the name of your newly created intent in the following handler
@@ -100,4 +101,88 @@ public class BasicLuisDialog : LuisDialog<object>
         await context.PostAsync($"You have reached the serve the opposing party intent. You said: {result.Query}"); //
         context.Wait(MessageReceived);
     }
+
+    #endregion
+
+    #region Housing & Apartment
+    [LuisIntent("Eviction and Defence")]
+    public async Task DefenceIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Eviction and Defence intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("HUD Eviction")]
+    public async Task HudIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the HUD Eviction intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+
+    [LuisIntent("Landlord locked me out what can i do")]
+    public async Task LockedIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Landlord locked me out what can i do intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Public & subsidized housing")]
+    public async Task PublicIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Public & subsidized housing intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Public Housing Evictions")]
+    public async Task PublicHousingIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Public Housing Evictions intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Public Housing Grievance Procedure")]
+    public async Task GrievanceIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Public Housing Grievance Procedure intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Section 515: Rural Rights")]
+    public async Task RuralrightsIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Section 515: Rural Rights intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Tenant Living in a foreclosed property")]
+    public async Task TenantIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Tenant Living in a foreclosed property intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Tenant Living in a foreclosed property")]
+    public async Task TenantIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Tenant Living in a foreclosed property intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Tenant's Rights in Washington state")]
+    public async Task TenantRightsIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Tenant's Rights in Washington state intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+
+
+
+
+
+
+
+
+    #endregion
 }
