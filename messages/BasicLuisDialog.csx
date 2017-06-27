@@ -162,13 +162,6 @@ public class BasicLuisDialog : LuisDialog<object>
         context.Wait(MessageReceived);
     }
 
-    [LuisIntent("Tenant Living in a foreclosed property")]
-    public async Task TenantIntent(IDialogContext context, LuisResult result)
-    {
-        await context.PostAsync($"You have reached the Tenant Living in a foreclosed property intent. You said: {result.Query}"); //
-        context.Wait(MessageReceived);
-    }
-
     [LuisIntent("Tenant's Rights in Washington state")]
     public async Task TenantRightsIntent(IDialogContext context, LuisResult result)
     {
