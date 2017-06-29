@@ -204,6 +204,207 @@ public class BasicLuisDialog : LuisDialog<object>
 
     #endregion
 
+    #region Foreclousre
+
+    [LuisIntent("Foreclosure when have mortgage")]
+    public async Task ForeclosuremortagageIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Foreclosure when have mortgage intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Homeowner's guide to short sales")]
+    public async Task HomeownerguideIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Homeowner's guide to short sales intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Non Borrowing spouses and Reverse Mortgages")]
+    public async Task NonborrowingIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Non Borrowing spouses and Reverse Mortgages intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
+
+    #region Emergency shelter & Assistance
+
+    [LuisIntent("Fight a denial or termination for HEN")]
+    public async Task FightdenialIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Fight a denial or termination for HEN intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Local HEN Admin Directory Homeless prevention")]
+    public async Task HendirectoryIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Local HEN Admin Directory Homeless prevention intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("People unable to work : ABD and HEN")]
+    public async Task UnabletoworkIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the People unable to work : ABD and HEN intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
+
+    #region Utilites & Phone
+
+    [LuisIntent("Low income home energy")]
+    public async Task LowincomehomeIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Low income home energy intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Public utilities")]
+    public async Task PublicutilitiesIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Public utilities intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
+
+    #region Homebuyers & Owners
+
+    [LuisIntent("Forfeiture of Your Real Estate Contract")]
+    public async Task ForfeitureIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Forfeiture of Your Real Estate Contract intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Options to Avoid Property Tax Foreclosure")]
+    public async Task AvoidpropertyIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Options to Avoid Property Tax Foreclosure intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Know Your Rights Before Buying a Home")]
+    public async Task RightsbeforebuyingIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Know Your Rights Before Buying a Home intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
+
+    #region House Discrimination
+
+    [LuisIntent("Fair Housing")]
+    public async Task FairhousingIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Fair Housing intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Fair Housing Guide for Renters & Home Buyers")]
+    public async Task GuideforrentersandbuyersIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Fair Housing Guide for Renters & Home Buyers intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Tenant Screening: Your Rights")]
+    public async Task TenantscreeningIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Tenant Screening: Your Rights intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Service Animals Questions")]
+    public async Task ServiceanimalsIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Service Animals Questions intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
+
+    #region Mobile home park tenants
+
+
+    [LuisIntent("My Landlord Has Not Paid Their Water Bill")]
+    public async Task landordnotpaidIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the My Landlord Has Not Paid Their Water Bill intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+
+    [LuisIntent("Buying a Manufactured Home")]
+    public async Task BuyingmanufacturedIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Buying a Manufactured Home intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
+
+    #region Public & subsidized Hosuing
+
+    [LuisIntent("When I Do Not Pay the Rent")]
+    public async Task DontpayrentIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the When I Do Not Pay the Rent intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
+
+    #region Small claim court
+
+    [LuisIntent("Using Small Claims Court to Recover Unpaid Wages")]
+    public async Task SmallclaimsIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Using Small Claims Court to Recover Unpaid Wages intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+
+    [LuisIntent("Certificate of Service - Small Claims Court")]
+    public async Task CertificatessmallIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Certificate of Service - Small Claims Court intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
+
+    #region Veteran and servicemember rights in housing and home loans
+
+    [LuisIntent("About VA Home Loan Program")]
+    public async Task HomeloanprogramIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the About VA Home Loan Program intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+
+    [LuisIntent("Information for Military Personnel")]
+    public async Task MilitaryinfoIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Information for Military Personnel intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+
+    [LuisIntent("Military and Veteran Legal Resource Guide")]
+    public async Task MilitaryveteranguideIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"You have reached the Military and Veteran Legal Resource Guide intent. You said: {result.Query}"); //
+        context.Wait(MessageReceived);
+    }
+
+    #endregion
 
 
 
