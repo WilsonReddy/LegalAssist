@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
-
+using System.Net.Http;
+using System.Net.Http.Headers;
 using Microsoft.Bot.Builder.Azure;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis;
@@ -41,9 +42,8 @@ public class BasicLuisDialog : LuisDialog<object>
     
     [LuisIntent("Divorce")]
     public async Task DivorceIntent(IDialogContext context, LuisResult result)
-    {
-        await context.PostAsync($"You have reached the Divorce intent. You said: {result.Query}"); //
-        context.Wait(MessageReceived);
+    {       
+        context.Wait(GetContentsFromContenExtractionApi("Divorce", result.Query));     
     }
     
     [LuisIntent("Divorce, Debt, and Bankruptcy")]
@@ -405,7 +405,38 @@ public class BasicLuisDialog : LuisDialog<object>
     }
 
     #endregion
+    #region ContentExtraction  Api call
+    static async Task<string> GetContentsFromContenExtractionApi(string intent, string query)
+    {
+        try
+        {
+            var client = new HttpClient();
+           
+            var uri = "http://contentsextractionapi.azurewebsites.net/api/ExtractContents";
 
+            HttpResponseMessage response;
+
+            // Request body
+            //byte[] byteData = Encoding.UTF8.GetBytes("{body}");
+
+            string reqBody = "  data: { Topic: " + intent + ", TItle: " + query + "},";
+
+            using (var content = new StringContent(reqBody))
+            {
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                response = client.PostAsync(uri, content).Result;
+            }
+            var jsonString = await response.Content.ReadAsStringAsync();
+            return jsonString;
+
+
+        }
+        catch (Exception e)
+        {
+            return e.Message;
+        }
+    }
+    #endregion
 
 
 }
