@@ -35,10 +35,131 @@ public class BasicLuisDialog : LuisDialog<object>
     string intentName = "";
     // Go to https://luis.ai and create a new intent, then train/publish your luis app.
     // Finally replace "MyIntent" with the name of your newly created intent in the following handler
+
+    [LuisIntent("Domestic Violence")]
+    public async Task DomesticViolenceIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "DomesticViolence";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Parenting Plans & Custody")]
+    public async Task ParentingPlansCustodyIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Parenting Plans & Custody";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Adoption")]
+    public async Task AdoptionIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Adoption";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Antiharassment & Stalking")]
+    public async Task AntiharassmentStalkingIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Antiharassment & Stalking";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Child support")]
+    public async Task ChildSupportIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Child support";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("The child protection system")]
+    public async Task ChildProtectionSystemIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "The child protection system";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Elder Abuse")]
+    public async Task ElderAbuseIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Elder Abuse";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Guardianship")]
+    public async Task GuardianshipIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Guardianship";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Going to court")]
+    public async Task GoingToCourtIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Going to court";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Marriage equality")]
+    public async Task MarriageEqualityIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Marriage equality";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Non-parents caring for children")]
+    public async Task NonParentsCaringForChildrenIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Non-parents caring for children";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent(" Non-parent custody")]
+    public async Task NonParentCustodyIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = " Non-parent custody";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Sexual Assault")]
+    public async Task SexualAssaultIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Sexual Assault";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Unmarried couples")]
+    public async Task UnmarriedCouplesIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Unmarried couples";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
     [LuisIntent("Declaration")]
     public async Task DeclarationIntent(IDialogContext context, LuisResult result)
     {
         intentName = "Declaration";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Paternity & Parentage")]
+    public async Task PaternityParentage(IDialogContext context, LuisResult result)
+    {
+        intentName = "Paternity & Parentage";
         await GetContentsFromContenExtractionApi(context, result);
         context.Wait(MessageReceived);
     }
@@ -229,6 +350,39 @@ public class BasicLuisDialog : LuisDialog<object>
         await GetContentsFromContenExtractionApi(context, result);
         context.Wait(MessageReceived);
     }
+
+    [LuisIntent("Tenant's rights")]
+    public async Task TenantsRightIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Tenant's rights";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Foreclosure")]
+    public async Task ForeclosureIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Foreclosure";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Emergency shelter & assistance")]
+    public async Task EmergencyShelterAssistanceIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Emergency shelter & assistance";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Housing discrimination")]
+    public async Task HousingDiscriminationIntent(IDialogContext context, LuisResult result)
+    {
+        intentName = "Housing discrimination";
+        await GetContentsFromContenExtractionApi(context, result);
+        context.Wait(MessageReceived);
+    }
+
 
     #endregion
 
